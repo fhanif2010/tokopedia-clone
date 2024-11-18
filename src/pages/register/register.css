@@ -38,7 +38,7 @@
     font-family: 'Open Sauce One', sans-serif;
 }
 
-.card-register span {
+.card-register .label {
     font-weight: bold;
     font-size: 22px;
 }
@@ -166,5 +166,19 @@
 
     img {
         height: 20px;
+    }
+}
+
+.card-register .card-sk {
+    margin-top: 20px;
+    font-size: 12px;
+
+    .action {
+        color: #00AA5B;
+        font-weight: 600;
+        text-decoration: none;
+    }
+    span {
+        margin: 0 2px;
     }
 }

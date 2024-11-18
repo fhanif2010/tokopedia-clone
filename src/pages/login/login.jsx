@@ -1,9 +1,15 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import './login.css'
 import qrLogo from '../../assets/barcode-logo.svg'
 import google from '../../assets/google.svg'
 
 function Login() {
+    const navigate = useNavigate();
+
+    const handlePageRegister = () => {
+        navigate(`/Register`)
+    }
     return (
         <div className="container">
             <header className="login-header">
@@ -17,7 +23,7 @@ function Login() {
                 <div className="card-login">
                     <div className="card-label">
                         <span>Masuk ke Tokopedia</span>
-                        <a href="#">Daftar</a>
+                        <a href="" onClick={handlePageRegister}>Daftar</a>
                     </div>
                     <div className="card-content">
                         <div className="card-input">
