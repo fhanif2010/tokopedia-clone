@@ -10,6 +10,10 @@ function Login() {
     const handlePageRegister = () => {
         navigate(`/Register`)
     }
+
+    const handlePageHome = () => {
+        navigate(`/Home`)
+    }
     return (
         <div className="container">
             <header className="login-header">
@@ -37,7 +41,7 @@ function Login() {
                         <a href="#">Butuh Bantuan?</a>
                     </div>
                     <div className="card-button">
-                        <button>
+                        <button onClick={handlePageHome}>
                             <span>Selanjutnya</span>
                         </button>
                     </div>

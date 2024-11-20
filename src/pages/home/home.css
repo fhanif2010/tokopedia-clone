@@ -72,6 +72,10 @@
     }
 }
 
+.home-container .home-header-action .search-bar:active {
+    border: 1px solid #00AA5B;
+}
+
 .home-container .home-header-action .shopping-cart {
     font-size: 24px;
 }
@@ -143,4 +147,12 @@
 .header-bottom .location {
     display: flex;
     gap: 2px;
+}
+
+.home-content {
+    display: flex;
+    align-items: center;
+    width: 1280px;
+    margin:  10px auto 20px;
+    background-color: #00AA5B;
 }

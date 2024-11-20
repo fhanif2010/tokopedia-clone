@@ -5,7 +5,8 @@ import { IoIosSearch } from "react-icons/io";
 import { LuShoppingCart } from "react-icons/lu";
 import { MdOutlineLocationOn } from "react-icons/md";
 import { RiArrowDropDownLine } from "react-icons/ri";
-
+import Banner from "../../component/banner/banner.jsx";
+import QuickTransaction from "../../component/quickTransaction/quickTransaction.jsx";
 
 function Home() {
     return (
@@ -69,6 +70,17 @@ function Home() {
                     </div>
                 </div>
             </div>
+            <div className="home-content">
+                <div className="landing-page">
+                    <Banner />
+                </div>
+            </div>
+            <div className="home-content">
+                <div className="landing-page">
+                    <QuickTransaction />
+                </div>
+            </div>
+
         </>
     )
 }
