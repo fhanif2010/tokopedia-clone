@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import './register.css'
-import qrLogo from '../../assets/barcode-logo.svg'
 import google from '../../assets/google.svg'
 
 function Register() {
@@ -9,6 +8,21 @@ function Register() {
     
     const handlePageLogin = () => {
         navigate(`/`);
+    }
+
+    const [buttonDisabled, setButtonDisabled] = useState(true)
+    const handleChange = (e) => {
+        if(e.target.value.length >= 5) {
+           setButtonDisabled(false)
+        }else{
+            setButtonDisabled(true)
+        }
+    }
+
+    const handlePage = () => {
+        if( buttonDisabled == false){
+            navigate('/home')
+        }
     }
 
     return (
@@ -25,7 +39,7 @@ function Register() {
                     <span className="label">Daftar Sekarang</span>
                     <div className="card-label">
                         <p>Sudah Punya Akun Tokopedia?</p>
-                        <a href="#" onClick={handlePageLogin}>Masuk</a>
+                        <a onClick={handlePageLogin}>Masuk</a>
                     </div>
                     <div className="btn-signin-alt">
                         <button>
@@ -38,14 +52,14 @@ function Register() {
                     </div>
                     <div className="card-content">
                         <div className="card-input">
-                            <input type="email" name="" id="" placeholder="Nomor HP atau Email" />
+                            <input type="email" name="" id="" placeholder="Nomor HP atau Email" onChange={handleChange} />
                         </div>
                         <div className="card-sample">
                             <p>Contoh: 0871819339182</p>
                         </div>
                     </div>
                     <div className="card-button">
-                        <button>
+                        <button className={`custom-button ${buttonDisabled ? "true" : "false"}`} onClick={handlePage}>
                             <span>Selanjutnya</span>
                         </button>
                     </div>

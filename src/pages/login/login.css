@@ -38,6 +38,7 @@
 
 .card-login .card-label {
     display: flex;
+    align-items: center;
     justify-content: space-between;
     margin: 20px 0 43px;
 
@@ -66,7 +67,7 @@
     border: 1px solid #00AA5B;
 }
 
-.card-input input {
+/* .card-input .input-type {
     border: 1px solid #ccc;
     border-radius: 8px;
     width: 100%;
@@ -74,10 +75,25 @@
     outline: none;
     font-size: inherit;
     background-color: transparent;
-}
+
+    .label {
+        position: absolute;
+        top: 20;
+        background-color: white;
+        opacity: 0;
+    }
+
+    input {
+        height: 100%;
+        width: 100%;
+        border: none;
+        outline: none;
+    }
+} */
 
 .card-sample {
     display: flex;
+
     p {
         font-family: 'Open Sauce One', sans-serif;
         margin: 2px 12px 0;
@@ -108,10 +124,17 @@
         border-radius: 8px;
         border: none;
     }
-    button:hover {
-        background-color: #00AA5B;
-        color: white;
-        cursor: pointer;
+
+    .custom-button.true {
+        opacity: 0.5;
+        cursor: not-allowed !important;
+    }
+
+    .custom-button.false:hover {
+            background-color: #00AA5B;
+            color: white;
+            cursor: pointer;
+        
     }
 
     span {

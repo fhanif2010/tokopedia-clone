@@ -12,12 +12,14 @@
     position: relative;
     display: flex;
     flex-direction: row;
-    box-sizing:border-box;
+    box-sizing: border-box;
+    margin-bottom: 24px;
 }
 
 .quickTransaction-container .content .card-content-left {
     width: 50%;
     margin-right: 8px;
+
     h2 {
         font-size: 20px;
         font-weight: 600;
@@ -30,6 +32,7 @@
     position: relative;
     display: block;
     margin-left: 8px;
+
     h2 {
         font-size: 20px;
         font-weight: 600;
@@ -58,9 +61,10 @@
     overflow: hidden;
 }
 
-.quickTransaction-container .content .list-item .cover{
+.quickTransaction-container .content .list-item .cover {
     border: 0.5px solid #F0F3F7;
     border-radius: 10px;
+
     img {
         width: 128px;
         height: 128px;
@@ -75,17 +79,161 @@
 }
 
 .quickTransaction-container .content .card-content-right .table-transaction .category {
-    
+    border-top-left-radius: 10px;
+    display: flex;
+
     button {
-        font-family: "Open Sauce One", "Nunito Sans", -apple-system, sans-serif;
-        padding: 0 24px;
-        font-size: 14px;
-        color: #00AA5B;
-        font-weight: 700;
         box-sizing: border-box;
+        font-weight: 600;
+        text-transform: capitalize;
+        font-size: 14px;
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        appearance: none;
+        pointer-events: auto;
+        transition: color 300ms cubic-bezier(0.63, 0.01, 0.29, 1);
+        display: inline-flex;
+        flex: 1 1 auto;
+        text-align: center;
+        -webkit-box-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        align-items: center;
+        height: 40px;
+        padding: 0px 24px;
+        color: #6D7588;
+    }
+}
+
+.quickTransaction-container .content .card-content-right .table-transaction .action {
+    position: relative;
+    display: flex;
+}
+
+.quickTransaction-container .content .card-content-right .table-transaction .action2 {
+    position: relative;
+    display: flex;
+    flex: 1 1 auto;
+    flex-flow: row;
+    padding: 6px;
+    min-width: 0px;
+    width: 100%;
+}
+
+.quickTransaction-container .content .card-content-right .table-transaction .action .colom {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    padding: 6px;
+    min-width: 0px;
+    width: 100%;
+
+    span {
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 18px;
+        display: inline-block;
+        pointer-events: none;
+        color: #6D7588;
+        margin-bottom: 4px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    .input {
+        height: 40px;
+        border-radius: 8px;
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        flex: 1 1 0%;
+        position: relative;
+        overflow: hidden;
+        transition: border-color 280ms;
+        background-color: var(--color-page-background, #FFFFFF);
+        border: 1px solid var(--color-border, #E5E7E9);
+    }
+
+    input {
+        min-width: 0;
+        min-height: 0;
+        width: 100%;
+        color: var(--NN950, #212121);
+        font-family: inherit;
+        background-color: transparent;
+        line-height: 20px;
         border: none;
         outline: none;
-        background-color: transparent;
-        height: 44px;
+        height: auto;
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+.quickTransaction-container .content .card-content-right .table-transaction .action .btn {
+    flex: 0 0 auto;
+
+    button {
+        background-color: #E4EBF5;
+        border: none;
+        border-radius: 8px;
+        color: #AAB4C8;
+        cursor: not-allowed;
+        display: inline-block;
+        font-family: inherit;
+        font-weight: 600;
+        font-size: 0.857143rem;
+        height: 40px;
+        line-height: 24px;
+        outline: none;
+        position: relative;
+        padding: 0px 16px;
+        text-indent: initial;
+        transition: background-color 300ms;
+        top: 25px;
+        width: 100%;
+        min-width: 80px;
+    }
+}
+
+.quickTransaction-container .btn-category {
+    position: relative;
+    width: 100%;
+}
+
+
+.quickTransaction-container .btn-category .btn-list {
+    overflow: auto hidden;
+    white-space: nowrap;
+    height: 40px;
+    display: flex;
+    scrollbar-width: none;
+
+    a {
+        display: flex;
+        align-items: center;
+        margin-right: 8px;
+        border-radius: 16px;
+        border: 1px solid #D6DFEB;
+        padding: 6px 12px;
+        cursor: pointer;
+    }
+
+    img {
+        width: 24px;
+        height: 24px;
+        object-fit: contain;
+        margin-right: 8px;
+    }
+
+    p {
+        font-size: 14px;
+        font-weight: normal;
+        font-style: normal;
+        letter-spacing: normal;
+        color: var(--NN950, #212121);
     }
 }

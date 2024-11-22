@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import './login.css'
 import qrLogo from '../../assets/barcode-logo.svg'
 import google from '../../assets/google.svg'
+
+import InputSign from "../../component/inputSign/inputSign";
 
 function Login() {
     const navigate = useNavigate();
@@ -11,8 +13,19 @@ function Login() {
         navigate(`/Register`)
     }
 
+    const [buttonDisable, setButtonDisable] = useState(true)
+    const handleChange = (e) => {
+        if (e.target.value.length >= 5) {
+            setButtonDisable(false)
+        } else {
+            setButtonDisable(true)
+        }
+    }
+
     const handlePageHome = () => {
-        navigate(`/Home`)
+        if (buttonDisable == false) {
+            navigate(`/Home`)
+        }
     }
     return (
         <div className="container">
@@ -30,9 +43,15 @@ function Login() {
                         <a href="" onClick={handlePageRegister}>Daftar</a>
                     </div>
                     <div className="card-content">
-                        <div className="card-input">
-                            <input type="email" name="" id="" placeholder="Nomor HP atau Email" />
-                        </div>
+                        {/* <div className="card-input">
+                            <div className="input-type">
+                                <div className="label">Nomor HP atau Email</div>
+                                <input type="email" name="" id="" placeholder="Nomor HP atau Email" onChange={handleChange} />
+                            </div>
+                        </div> */}
+                        
+                        <InputSign onChange={onchange} label="Nomor HP atau Email" placeholder="Nomor HP atau Email"/>
+
                         <div className="card-sample">
                             <p>Contoh: 0871819339182</p>
                         </div>
@@ -41,7 +60,7 @@ function Login() {
                         <a href="#">Butuh Bantuan?</a>
                     </div>
                     <div className="card-button">
-                        <button onClick={handlePageHome}>
+                        <button className={`custom-button ${buttonDisable ? "true" : "false"}`} onClick={handlePageHome}>
                             <span>Selanjutnya</span>
                         </button>
                     </div>
@@ -50,13 +69,13 @@ function Login() {
                     </div>
                     <div className="btn-signin-alt">
                         <button>
-                            <img src={qrLogo}  />
+                            <img src={qrLogo} />
                             <span>Scan Kode QR</span>
                         </button>
                     </div>
                     <div className="btn-signin-alt">
                         <button>
-                            <img src={google}  />
+                            <img src={google} />
                             <span>Google</span>
                         </button>
                     </div>

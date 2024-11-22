@@ -1,0 +1,39 @@
+.card-input .input-type {
+    position: relative;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 100%;
+    padding: 0 10px;
+    outline: none;
+    font-size: inherit;
+    background-color: transparent;
+    
+    .label {
+        position: absolute;
+        opacity: 0;
+        padding: 0 2px;
+        top: 13px;
+        font-size: 13px;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .label.true {
+        top: -8px;
+        opacity: 1;
+        background-color: white;
+        padding: 0 2px;
+        color: #9b9a9a;
+
+    }
+
+    input {
+        height: 100%;
+        width: 100%;
+        border: none;
+        outline: none;
+    }
+} 
+
+.card-input .input-type.true {
+    border: 1px solid #00AA5B;
+}
