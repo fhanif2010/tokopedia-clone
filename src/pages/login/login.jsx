@@ -42,16 +42,8 @@ function Login() {
                         <span>Masuk ke Tokopedia</span>
                         <a href="" onClick={handlePageRegister}>Daftar</a>
                     </div>
-                    <div className="card-content">
-                        {/* <div className="card-input">
-                            <div className="input-type">
-                                <div className="label">Nomor HP atau Email</div>
-                                <input type="email" name="" id="" placeholder="Nomor HP atau Email" onChange={handleChange} />
-                            </div>
-                        </div> */}
-                        
-                        <InputSign onChange={onchange} label="Nomor HP atau Email" placeholder="Nomor HP atau Email"/>
-
+                    <div className="card-content">                        
+                        <InputSign onChange={handleChange} label="Nomor HP atau Email" placeholder="Nomor HP atau Email"/>
                         <div className="card-sample">
                             <p>Contoh: 0871819339182</p>
                         </div>

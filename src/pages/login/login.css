@@ -63,34 +63,6 @@
     justify-content: center;
 }
 
-.card-input input:focus {
-    border: 1px solid #00AA5B;
-}
-
-/* .card-input .input-type {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    width: 100%;
-    padding: 0 10px;
-    outline: none;
-    font-size: inherit;
-    background-color: transparent;
-
-    .label {
-        position: absolute;
-        top: 20;
-        background-color: white;
-        opacity: 0;
-    }
-
-    input {
-        height: 100%;
-        width: 100%;
-        border: none;
-        outline: none;
-    }
-} */
-
 .card-sample {
     display: flex;
 

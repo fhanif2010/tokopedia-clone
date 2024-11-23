@@ -10,7 +10,7 @@
     justify-content: space-between;
     align-items: center;
     background-color: #F0F3F7;
-    padding: 5px 20px;
+    padding: 0 32px;
     font-size: 12px;
 }
 
@@ -21,7 +21,12 @@
     color: #6D7588;
 
     img {
-        width: 20px;
+        width: 24px;
+    }
+
+    span:hover {
+        color: #00AA5B;
+        cursor: pointer;
     }
 }
 
@@ -29,6 +34,11 @@
     display: flex;
     gap: 32px;
     color: #6D7588;
+
+    span:hover {
+        color: #00AA5B;
+        cursor: pointer;
+    }
 }
 
 .home-container .home-header-action {

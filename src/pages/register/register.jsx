@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import './register.css'
 import google from '../../assets/google.svg'
+import InputSign from "../../component/inputSign/inputSign";
 
 function Register() {
     const navigate = useNavigate();
@@ -51,9 +52,7 @@ function Register() {
                         <p>atau</p>
                     </div>
                     <div className="card-content">
-                        <div className="card-input">
-                            <input type="email" name="" id="" placeholder="Nomor HP atau Email" onChange={handleChange} />
-                        </div>
+                        <InputSign label="Nomor HP atau Email" placeholder="Nomor HP atau Email" onChange={handleChange}/>
                         <div className="card-sample">
                             <p>Contoh: 0871819339182</p>
                         </div>

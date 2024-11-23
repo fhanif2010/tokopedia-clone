@@ -19,7 +19,7 @@ function Home() {
                             <span>Download Tokopedia App</span>
                         </div>
                         <div className="action">
-                            <span>Tentang Kami</span>
+                            <span><a href="https://www.tokopedia.com/about/">Tentang Kami</a></span>
                             <span>Mitra Tokopedia</span>
                             <span>Mulai Berjualan</span>
                             <span>Promo</span>

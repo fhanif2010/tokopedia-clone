@@ -13,6 +13,42 @@
     width: inherit;
 }
 
+.banner-promo .next-page {
+    opacity: 0;
+
+    .button-left {
+        position: absolute;
+        top: 45%;
+        text-align: center;
+    }
+
+    .button-right {
+        position: absolute;
+        top: 45%;
+        right: 0;
+        text-align: center;
+        transition: ease-in-out;
+    }
+}
+
+.banner-promo .next-page.true {
+    opacity: 1;
+    .button-left {
+        position: absolute;
+        top: 45%;
+        left: -20px;
+        text-align: center;
+    }
+
+    .button-right {
+        position: absolute;
+        top: 45%;
+        right: -20px;
+        text-align: center;
+    }
+}
+
+
 .banner-promo .next-page button {
     width: 40px;
     height: 40px;
@@ -20,18 +56,6 @@
     border: none;
 }
 
-.banner-promo .button-left {
-    position: absolute;
-    top: 45%;
-    text-align: center;
-}
-
-.banner-promo .button-right {
-    position: absolute;
-    top: 45%;
-    right: 0;
-    text-align: center;
-}
 
 .banner-promo .footer {
     margin-bottom: 5px;
