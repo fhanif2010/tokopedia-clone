@@ -162,6 +162,36 @@
 .home-content {
     display: flex;
     align-items: center;
-    width: 1280px;
+    width: 1208px;
     margin:  10px auto 20px;
+}
+
+.home-content .label {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    font-family: 'Open Sauce One', sans-serif;
+    font-size: 14px;
+    color: #6D7588;
+    gap: 12px;
+
+    h2 {
+        font-size: 20px;
+        color: black;
+    }
+
+    button {
+        color: #00AA5B;
+        border: none;
+        display: flex;
+        align-items: center;
+        background-color: transparent;
+        font-size: 14px;
+
+        .icon {
+            width: 24px;
+            height: 24px;
+        }
+    }
+
 }

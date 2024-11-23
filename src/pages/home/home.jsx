@@ -7,6 +7,8 @@ import { MdOutlineLocationOn } from "react-icons/md";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import Banner from "../../component/banner/banner.jsx";
 import QuickTransaction from "../../component/quickTransaction/quickTransaction.jsx";
+import CardLandscape from "../../component/cardLandscape/cardLandscape.jsx";
+
 
 function Home() {
     return (
@@ -19,7 +21,7 @@ function Home() {
                             <span>Download Tokopedia App</span>
                         </div>
                         <div className="action">
-                            <span><a href="https://www.tokopedia.com/about/">Tentang Kami</a></span>
+                            <span>Tentang Kami</span>
                             <span>Mitra Tokopedia</span>
                             <span>Mulai Berjualan</span>
                             <span>Promo</span>
@@ -78,6 +80,11 @@ function Home() {
             <div className="home-content">
                 <div className="landing-page">
                     <QuickTransaction />
+                </div>
+            </div>
+            <div className="home-content">
+                <div className="colom-product">
+                    <CardLandscape />
                 </div>
             </div>
 
