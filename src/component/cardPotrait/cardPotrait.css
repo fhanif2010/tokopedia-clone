@@ -1,0 +1,8 @@
+.cardPotrait-container {
+    width: 100%;
+}
+
+.cardPotrait-container .card-list {
+    display: grid;
+    grid-template-columns: repeat(6, calc(18% - 16px));
+}

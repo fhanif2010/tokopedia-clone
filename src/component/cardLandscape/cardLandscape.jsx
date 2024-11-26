@@ -4,7 +4,7 @@ import './cardLandscape.css'
 
 function CardLandscape() {
     return (
-        <div className="container">
+        <div className="cardLandscape-container">
             <div className="label">
                 <h2>Banyak orang mencari ini</h2>
                 <div>setelah cari bangku</div>

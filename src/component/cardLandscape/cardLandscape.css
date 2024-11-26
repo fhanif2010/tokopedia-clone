@@ -1,20 +1,20 @@
-.container {
+.cardLandscape-container {
     position: relative;
     width: 1208px;
 }
 
-.container .label {
+.cardLandscape-container .label {
     margin-bottom: 20px;
 }
 
-.container .card-list {
+.cardLandscape-container .card-list {
     display: grid;
     grid-template-columns: repeat(4, calc(25% - 12px));
     grid-template-rows: repeat(2, 100px);
     gap: 16px;
 }
 
-.container .card {
+.cardLandscape-container .card {
     display: flex;
     align-items: center;
     gap: 20px;
@@ -28,7 +28,11 @@
     margin: 0px;
 }
 
-.container .card .desc {
+.cardLandscape-container .card:hover {
+    cursor: pointer;
+}
+
+.cardLandscape-container .card .desc {
     font-family: 'Open Sauce One', sans-serif;
     h4 {
         font-size: 16px;

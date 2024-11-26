@@ -8,7 +8,7 @@ import { RiArrowDropDownLine } from "react-icons/ri";
 import Banner from "../../component/banner/banner.jsx";
 import QuickTransaction from "../../component/quickTransaction/quickTransaction.jsx";
 import CardLandscape from "../../component/cardLandscape/cardLandscape.jsx";
-
+import CardPotrait from "../../component/cardPotrait/cardPotrait.jsx";
 
 function Home() {
     return (
@@ -87,7 +87,17 @@ function Home() {
                     <CardLandscape />
                 </div>
             </div>
-
+            <div className="home-content">
+                <div className="colom-product">
+                    <CardPotrait />
+                </div>
+            </div>
+            <hr style={{ height: '8px', backgroundColor: '#F0F3F7', border: 'none'}}/>
+            <div className="home-content">
+                <div className="colom-product">
+                    <CardPotrait />
+                </div>
+            </div>
         </>
     )
 }

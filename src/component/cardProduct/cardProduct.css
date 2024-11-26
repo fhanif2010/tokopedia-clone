@@ -1,0 +1,91 @@
+.cardProduct-container {
+    width: 100%;
+}
+
+.card {
+    margin: 0 8px;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 4px 0px;
+}
+
+.cardProduct-container .img {
+    width: 100%;
+    margin-bottom: 8px;
+
+    img {
+        width: inherit;
+    }
+}
+
+.cardProduct-container .desc {
+    font-family: 'Open Sauce One', sans-serif;
+    font-size: 12px;
+    padding: 6px;
+    gap: 4px;
+    display: flex;
+    flex-direction: column;
+
+    .name {
+        line-height: 1.5;
+        white-space: pre-wrap;
+        word-break: keep-all;
+        text-overflow: ellipsis;
+        overflow: hidden;
+            min-height: 16px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+
+    .price {
+        gap: 4px;
+        display: flex;
+        flex-direction: column;
+
+        h4 {
+            font-size: 14px;
+        }
+    }
+}
+
+.cardProduct-container .desc .discont {
+    display: flex;
+    font-size: 10px;
+    gap: 3px;
+    color: #AAB4CA;
+}
+
+.cardProduct-container .desc .discont .realPrice {
+    text-decoration: line-through;
+}
+
+.cardProduct-container .desc .discont .percentage {
+    color: red;
+    font-weight: bold;
+}
+
+.cardProduct-container .desc .location {
+    display: flex;
+    font-size: 12px;
+    gap: 4px;
+
+    img {
+        width: 16px;
+    }
+}
+
+.cardProduct-container .desc .point {
+    display: flex;
+    gap: 4px;
+
+    .rating {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+
+        img {
+            width: 16px;
+            height: 16px;
+        }
+    }
+}
