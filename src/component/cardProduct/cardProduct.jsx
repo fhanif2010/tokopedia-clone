@@ -9,7 +9,7 @@ function CardProduct() {
             <div className="cardProduct-container">
                 <div className="card">
                     <div className="img">
-                        <img src="https://images.tokopedia.net/img/cache/300-square/product-1/2020/1/6/48690432/48690432_97a29ae2-7ec9-4c9e-bffc-b3d6d876f027_1296_1296" alt="" />
+                        <img src="https://images.tokopedia.net/img/cache/300-square/product-1/2019/2/11/37162619/37162619_7a06940f-8a3b-4fcc-8ba8-6f8982ebf9b8_700_383.jpg" alt="" />
                     </div>
                     <div className="desc">
                         <p className="name">Music Sterei Earphone PINZY D7 Series doasdasdaasdsadsa dsaasdsads</p>

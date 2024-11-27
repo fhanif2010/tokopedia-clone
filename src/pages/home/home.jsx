@@ -9,6 +9,7 @@ import Banner from "../../component/banner/banner.jsx";
 import QuickTransaction from "../../component/quickTransaction/quickTransaction.jsx";
 import CardLandscape from "../../component/cardLandscape/cardLandscape.jsx";
 import CardPotrait from "../../component/cardPotrait/cardPotrait.jsx";
+import CardCategory from "../../component/cardCategory/cardCategory.jsx";
 
 function Home() {
     return (
@@ -92,10 +93,10 @@ function Home() {
                     <CardPotrait />
                 </div>
             </div>
-            <hr style={{ height: '8px', backgroundColor: '#F0F3F7', border: 'none'}}/>
+            <hr style={{ height: '8px', backgroundColor: '#F0F3F7', border: 'none', margin: '40px 0'}}/>
             <div className="home-content">
                 <div className="colom-product">
-                    <CardPotrait />
+                    <CardCategory />
                 </div>
             </div>
         </>

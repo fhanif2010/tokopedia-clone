@@ -1,0 +1,71 @@
+.cardCategory-container {
+    display: block;
+    box-sizing: border-box;
+    width: 1208px;
+}
+
+.cardCategory-container .head {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.cardCategory-container .head button {
+    position: relative;
+    height: 64px;
+    width: 216px;
+    padding: 6px 8px;
+    outline: 0px;
+    border: none;
+    border-radius: 8px;
+}
+
+.cardCategory-container .head #one {
+  background-image: url(https://images.tokopedia.net/img/cache/250/attachment/2019/11/7/75545163/75545163_f6ac6050-3872-48e8-b445-02a33e346061.jpg)
+}
+
+.cardCategory-container .head #two {
+    background-image: url(https://images.tokopedia.net/img/cache/250/attachment/2019/10/23/40768394/40768394_7c9ad641-8a48-4b63-a4cc-cae37bbcaae1.jpg);
+}
+
+.cardCategory-container .head #tree {
+    background-image: url(https://images.tokopedia.net/img/cache/250/attachment/2019/10/23/40768394/40768394_6a24460c-fbc2-40ab-bea6-3e557474f1d7.jpg);
+}
+
+.cardCategory-container .head .four {
+    background-image: url(https://images.tokopedia.net/img/cache/250/ndZFpx/2023/10/6/b224bcca-2338-49cc-b565-2e96f084e8f4.jpg);
+}
+
+.cardCategory-container .head .detail {
+    height: 40px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    font-family: 'Open Sauce One', sans-serif;
+    text-align: left;
+}
+
+.cardCategory-container .head .detail::before {
+    content: '';
+    position: absolute;
+    top: 7px;
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.cardCategory-container .head .detail.active::before {
+    content: '';
+    position: absolute;
+    top: 7px;
+    width: 40px;
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+}
+
+.cardCategory-container .card-list {
+    display: grid;
+    grid-template-columns: repeat(6, calc(18% - 16px));
+}

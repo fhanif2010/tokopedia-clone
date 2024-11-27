@@ -2,7 +2,12 @@
     width: 100%;
 }
 
+.cardPotrait-container .label {
+    margin-bottom: 10px;
+}
+
 .cardPotrait-container .card-list {
     display: grid;
     grid-template-columns: repeat(6, calc(18% - 16px));
 }
+
