@@ -3,18 +3,18 @@ import './cardProduct.css';
 import iconStar from '../../assets/star.png'
 import officialAccount from '../../assets/react.svg'
 
-function CardProduct() {
+const CardProduct = ({data}) => {
     return (
         <>
             <div className="cardProduct-container">
                 <div className="card">
                     <div className="img">
-                        <img src="https://images.tokopedia.net/img/cache/300-square/product-1/2019/2/11/37162619/37162619_7a06940f-8a3b-4fcc-8ba8-6f8982ebf9b8_700_383.jpg" alt="" />
+                        <img src={data && data.image} alt="" />
                     </div>
                     <div className="desc">
-                        <p className="name">Music Sterei Earphone PINZY D7 Series doasdasdaasdsadsa dsaasdsads</p>
+                        <p className="name">{data && data.title}</p>
                         <div className="price">
-                            <h4>Rp9.500</h4>
+                            <h4>Rp{data && data.price}</h4>
                             <div className="discont">
                                 <p className="realPrice">Rp13.000</p>
                                 <p className="percentage">27%</p>
@@ -22,7 +22,7 @@ function CardProduct() {
                         </div>
                         <div className="location">
                             <img src={officialAccount} alt="" />
-                            <p>Jakarta Barat</p>
+                            <p>{data && data.location}</p>
                         </div>
                         <div className="point">
                             <div className="rating">
