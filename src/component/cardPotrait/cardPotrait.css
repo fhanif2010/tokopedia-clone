@@ -7,8 +7,9 @@
 }
 
 .cardPotrait-container .card-list {
-    display: grid;
-    gap: 8px;
-    grid-template-columns: repeat(6, calc(18% - 22px));
+    display: flex;
+    width: 100%;
+    gap: 12px;
+    overflow: hidden;
 }
 

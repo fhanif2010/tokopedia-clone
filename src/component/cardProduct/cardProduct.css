@@ -1,6 +1,7 @@
 .cardProduct-container {
-    width: 200px;
-    height: 317px;
+    min-width: 190px;
+    min-height: 340px;
+    margin-bottom: 10px;
 }
 
 .card {
