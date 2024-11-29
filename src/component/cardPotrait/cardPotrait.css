@@ -6,10 +6,50 @@
     margin-bottom: 10px;
 }
 
-.cardPotrait-container .card-list {
+.cardPotrait-container .carosel-product {
+    height: 343px;
+    width: 1208px;
+    overflow: hidden;
+    position: relative; 
+    display: block;
+}
+
+.cardPotrait-container .carosel-product:hover {
+    
+}
+
+.cardPotrait-container .carosel-product .card-list {
     display: flex;
     width: 100%;
     gap: 12px;
     overflow: hidden;
 }
 
+.cardPotrait-container .carosel-product .carousel-btn {
+    position: absolute;
+    top: 50%;
+    visibility: hidden;
+    transition: visibility 0.5s, opacity 0.5s ease-in-out;
+    
+    button {
+        width: 32px; 
+        height: 32px; 
+        border-radius: 50%;
+        border: none;
+        outline: none;
+    }
+}
+
+.cardPotrait-container .carosel-product:hover .carousel-btn {
+    position: absolute;
+    top: 50%;
+    visibility: visible;
+    
+    button {
+        width: 32px; 
+        height: 32px; 
+        border-radius: 50%;
+        border: none;
+        outline: none;
+    }
+}

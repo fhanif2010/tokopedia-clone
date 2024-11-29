@@ -1,22 +1,34 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import CardProduct from "../cardProduct/cardProduct";
 import './cardPotrait.css'
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 function CardPotrait({ product }) {
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentIndex((prevIndex) => 
+                prevIndex === product.lenght - 1 ? 0 : prevIndex + 1
+            );
+        }, 5000);
+        return () => clearInterval(interval)
+    }, [product.lenght])
+
     return (
         <div className="cardPotrait-container">
             <div className="label">
                 <h2>Bayar di Tempat &lt; 49 Ribu</h2>
             </div>
-            <div style={{ height: '343px', width: '1208px', overflow: 'hidden', position: 'relative', display: 'block'}}>
+            <div className="carosel-product">
                 <div className="card-list">
                     {product.map((item, index) => <CardProduct key={index} data={item} />)}
                 </div>
-                <div className="carousel-nav" style={{ position: 'absolute', top: '50%', left: 0}}>
-                    <button >Prev</button>
+                <div className="carousel-btn" style={{ left: 0 }}>
+                    <button><IoIosArrowBack /></button>
                 </div>
-                <div className="carousel-nav" style={{position: 'absolute', top: '50%', right: 7}}>
-                    <button style={{ width: '32px', height: '32px', borderRadius: '50%', border: 'none', outline: 'none'}}>Next</button>
+                <div className="carousel-btn" style={{right: 7}}>
+                    <button><IoIosArrowForward /></button>
                 </div>
             </div>
         </div>
