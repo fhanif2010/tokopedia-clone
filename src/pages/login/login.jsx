@@ -8,14 +8,23 @@ import InputSign from "../../component/inputSign/inputSign";
 
 function Login() {
     const navigate = useNavigate();
+    const [user, setUser] = useState('');
+
+    //DataBase User
+    const DBUser = {
+        email: 'fhanif665@gmail.com',
+        number: '089651688182'
+    };
 
     const handlePageRegister = () => {
         navigate(`/Register`)
     }
 
     const [buttonDisable, setButtonDisable] = useState(true)
-    const handleChange = (e) => {
-        if (e.target.value.length >= 5) {
+    const handleInput = (e) => {
+        const value = e.target.value
+        setUser(value)
+        if (value.length >= 5) {
             setButtonDisable(false)
         } else {
             setButtonDisable(true)
@@ -24,9 +33,17 @@ function Login() {
 
     const handlePageHome = () => {
         if (buttonDisable == false) {
-            navigate(`/Home`)
+            if (user === DBUser.email) {
+                console.log('ok')
+            } else if (user === DBUser.number) {
+                console.log('pp')
+            } else (
+                console.log('Email atau Number tidak ditemukan')
+            )
         }
     }
+
+
     return (
         <div className="container">
             <header className="login-header">
@@ -42,8 +59,8 @@ function Login() {
                         <span>Masuk ke Tokopedia</span>
                         <a href="" onClick={handlePageRegister}>Daftar</a>
                     </div>
-                    <div className="card-content">                        
-                        <InputSign onChange={handleChange} label="Nomor HP atau Email" placeholder="Nomor HP atau Email"/>
+                    <div className="card-content">
+                        <InputSign onChange={handleInput} value={user} label="Nomor HP atau Email" placeholder="Nomor HP atau Email" />
                         <div className="card-sample">
                             <p>Contoh: 0871819339182</p>
                         </div>

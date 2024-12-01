@@ -10,22 +10,22 @@
     
     .label {
         position: absolute;
-        opacity: 0;
+        visibility: hidden;
         padding: 0 2px;
         top: 13px;
         font-size: 13px;
+        color: #9b9a9a;
         transition: all 0.2s ease-in-out;
     }
-
+    
     .label.true {
         top: -8px;
-        opacity: 1;
+        visibility: visible;
         background-color: white;
         padding: 0 2px;
         color: #9b9a9a;
-
     }
-
+    
     input {
         height: 100%;
         width: 100%;
