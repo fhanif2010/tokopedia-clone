@@ -9,6 +9,7 @@ import InputSign from "../../component/inputSign/inputSign";
 function Login() {
     const navigate = useNavigate();
     const [user, setUser] = useState('');
+    const [example, setExample] = useState('contoh: 086575188192')
 
     //DataBase User
     const DBUser = {
@@ -28,6 +29,7 @@ function Login() {
             setButtonDisable(false)
         } else {
             setButtonDisable(true)
+            setExample('contoh: 086575188192')
         }
     }
 
@@ -35,11 +37,14 @@ function Login() {
         if (buttonDisable == false) {
             if (user === DBUser.email) {
                 console.log('ok')
+                navigate(`/home`)
             } else if (user === DBUser.number) {
                 console.log('pp')
-            } else (
+                navigate(`/home`)
+            } else {
                 console.log('Email atau Number tidak ditemukan')
-            )
+                setExample('Email Anda Belum Terdaftar')
+            }
         }
     }
 
@@ -62,7 +67,7 @@ function Login() {
                     <div className="card-content">
                         <InputSign onChange={handleInput} value={user} label="Nomor HP atau Email" placeholder="Nomor HP atau Email" />
                         <div className="card-sample">
-                            <p>Contoh: 0871819339182</p>
+                            <p>{example}</p>
                         </div>
                     </div>
                     <div className="card-help">
